@@ -136,26 +136,11 @@
     </div>
   </div>
 
-  <!-- Exit Prompt -->
-  <div id="exitPrompt" class="screen hidden">
-    <h1 class="glow-text">Oh no, you're leaving 😢</h1>
-    <p>We hoped you liked the services!</p>
-  </div>
-
   <script>
     document.getElementById("enterBtn").addEventListener("click", () => {
       document.getElementById("landing").style.display = "none";
       document.getElementById("mainContent").classList.remove("hidden");
       document.body.style.overflow = "auto";
-    });
-
-    // Show exit message on unload
-    window.addEventListener("beforeunload", (e) => {
-      const exitPrompt = document.getElementById("exitPrompt");
-      exitPrompt.classList.remove("hidden");
-      setTimeout(() => {
-        exitPrompt.classList.add("hidden");
-      }, 1500);
     });
   </script>
 </body>
